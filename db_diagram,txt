@@ -1,0 +1,33 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+https://dbdiagram.io/d
+
+Table livro{
+  id interger [primary key]
+  name varcar(255)
+  id_saga integer [ref:> saga.id]
+  id_genero integer [ref:> genero.id]
+  id_categoria integer [ref:> categoria.id]
+  id_autor integer [ref:> autor.id]
+}
+
+Table saga{
+  id integer [primary key]
+  name varchar(255)
+}
+
+Table categoria{
+  id interger [primary key]
+  name varhcar(255)
+}
+
+Table genero{
+  id integer [primary key]
+  name varchar(255)
+}
+
+Table autor{
+  id integer [primary key]
+  name varcar(255)
+}
+
